@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+
+        function validation(){
+            try {
+                
+            
+            // alert("hh");
+            // return false
+
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var phonenumber = document.getElementById("phonenumber").value;
+            var practice = document.getElementById("practice").value;
+            var role = document.getElementById("role").value;
+            var checkbox = document.getElementById("checkbox").checked;
+
+            firstname = firstname.trim();
+            lastname = lastname.trim();
+            email = email.trim();
+            password = password.trim();
+            phonenumber = phonenumber.trim();
+            practice = practice.trim();
+            role = role.trim();
+            
+            
+
+            if(firstname=="" || lastname=="" || email=="" || password=="" ||phonenumber
+             =="" || practice=="" || role=="" || !checkbox){
+                if(firstname=="" && lastname=="" && email=="" && password=="" && 
+                phonenumber=="" && practice=="" && role=="" || !checkbox ){
+                    alert("All field are mandatory");
+                    return false;
+                }
+                if(firstname==""){
+                    alert("please enter first name" );
+                    return false;
+                }
+
+                if(lastname==""){
+                    alert("please enter last name" );
+                    return false;
+                }
+
+                if(email==""){
+                    alert("please enter email" );
+                    return false;
+                }
+
+                if(password==""){
+                    alert("please enter password" );
+                    return false;
+                }
+
+                if(phonenumber==""){
+                    alert("please enter phonenumber" );
+                    return false;
+                }
+
+                if(practice==""){
+                    alert("please enter Practice field" );
+                    return false;
+                }
+
+                if(role==""){
+                    alert("please enter role" );
+                    return false;
+                }
+
+                if(checkbox==""){
+                    alert("please tick in checkbox" );
+                    return false;
+                
+                }
+             }
+             else{
+                alert("all good");
+                return true;
+             }
+            } catch (error) {
+               alert(error);
+               return false; 
+            }
+            
+
+
+        }
+
+
+
+
+    </script>
+    <div class="outer">
+
+     <div class="inner">
+        <div id="signup">
+            Sign Up
+        </div>
+
+          <div> 
+            <input type="text" id="firstname" placeholder="First Name">
+
+            
+            <input type="text" id="lastname" placeholder="Last Name">
+        </div>
+          
+        
+        <div>
+            
+            <input type="email" id="email" placeholder="Email">
+        
+        </div>
+        
+    <div>  
+            <input type="password" id="password" placeholder="Password">
+        
+</div>
+
+<div >
+            <input type="number" id="phonenumber" placeholder="Phone Name">
+    
+</div>
+        
+    <div>   
+            <input type="text" id="practice" placeholder="Practice Field">
+    
+    </div>
+
+    <div>   
+        <input type="text" id="role" placeholder="Role">
+
+</div>
+<div>
+    
+    <input type="checkbox" id="checkbox">
+   <span> You agree to our Terms Privacy Policy</span> 
+    
+</div>
+
+<div>
+<button type="submit" id="button" onclick="validation()">Send</button>
+</div>
+
+
+    </div>
+</body>
+</html>
